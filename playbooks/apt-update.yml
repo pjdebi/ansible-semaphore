@@ -1,5 +1,6 @@
 ---
 - hosts: docker
+  become_user: root
   become: yes
   # TODO When updating these servers the NAS must be last. Portainer must be down while the nas is down.
   tasks:
