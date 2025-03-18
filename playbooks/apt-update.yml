@@ -7,6 +7,8 @@
       apt:
         upgrade: dist
         update_cache: yes
+      pause:
+        minutes: 3
 - hosts: proxmox
   tasks:
     - name: Perform a dist-upgrade.
