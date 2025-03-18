@@ -13,3 +13,6 @@
       apt:
         upgrade: dist
         update_cache: yes
+    - name: Update Home Assistant LXC
+      shell:
+        cmd: pct exec 101 apt update && pct exec 101 apt upgrade
