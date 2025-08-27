@@ -1,0 +1,7 @@
+---
+- hosts: docker
+  become_user: root
+  become: true
+  tasks:
+    - name: Docker Image Prune
+      ansible.builtin.shell: yes | docker image prune
