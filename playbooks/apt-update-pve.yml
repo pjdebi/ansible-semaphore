@@ -1,0 +1,6 @@
+- hosts: proxmox
+  tasks:
+    - name: Perform a dist-upgrade.
+      apt:
+        upgrade: dist
+        update_cache: yes
