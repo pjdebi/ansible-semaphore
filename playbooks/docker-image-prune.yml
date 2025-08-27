@@ -3,4 +3,4 @@
   become_user: root
   become: true
   tasks:
-    - include: docker-image-prune.yml
+    - include_tasks: docker-image-prune.yml
