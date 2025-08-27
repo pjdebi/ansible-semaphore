@@ -1,0 +1,3 @@
+- name: Docker Image Prune
+  tasks:
+    ansible.builtin.shell: yes | docker image prune
