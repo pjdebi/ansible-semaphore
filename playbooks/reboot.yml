@@ -1,17 +1,4 @@
 ---
 - hosts: proxmox
   tasks:
-    - name: Reboot the server
-      reboot:
-        msg: "Reboot initiated by Ansible because updates were applied"
-        reboot_timeout: 300
-        test_command: ping -c 4 {{ ansible_host }}
-        post_reboot_delay: 30
-# - hosts: docker
-#   tasks:
-#     - name: Reboot the server
-#       reboot:
-#         msg: "Reboot initiated by Ansible because updates were applied"
-#         reboot_timeout: 300
-#         test_command: ping -c 4 {{ ansible_host }}
-#         post_reboot_delay: 30
+    - include: reboot.yml
