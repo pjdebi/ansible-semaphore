@@ -7,15 +7,16 @@
       apt:
         upgrade: dist
         update_cache: yes
+- hosts: pterodactyl
+  become_user: root
+  tasks:
+    - name: Perform a dist-upgrade.
+      apt:
+        upgrade: dist
+        update_cache: yes
 - hosts: proxmox
   tasks:
     - name: Perform a dist-upgrade.
       apt:
         upgrade: dist
         update_cache: yes
-# - hosts: pterodactyl
-#   tasks:
-#     - name: Perform a dist-upgrade.
-#       apt:
-#         upgrade: dist
-#         update_cache: yes
