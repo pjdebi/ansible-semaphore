@@ -1,4 +1,10 @@
 ---
+# Rebooting proxmox reboots the 2 VMs inside
 - hosts: proxmox
   tasks:
-    - include: reboot.yml
+    - name: Reboot the server
+      reboot:
+        msg: "Reboot initiated by Ansible because updates were applied"
+        reboot_timeout: 300
+        test_command: ping -c 4 {{ ansible_host }}
+        post_reboot_delay: 30
